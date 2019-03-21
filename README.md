@@ -6,7 +6,7 @@
 ---
 #### 模板&服务
 ---
-    提供以下可选择的模板和服务
+提供以下可选择的模板和服务
 
 - vue+ts前后端分离工程模板  [去看看怎么使用](https://github.com/liya3719/vue-ts-template)
 - 基于koa2的前后端分离工程模板  [去看看怎么使用](https://github.com/liya3719/koa2-separate-template)
