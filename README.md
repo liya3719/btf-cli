@@ -16,7 +16,7 @@
 - 监控服务  [去看看怎么使用](https://github.com/liya3719/fe-monitor)
 - 构建服务  [去看看怎么使用](https://github.com/liya3719/btf-middleware-webpack4)
 - 接收服务  [去看看怎么使用](https://github.com/liya3719/btf-middleware-receive)
-- 安装服务  [去看看怎么使用](https://github.com/liya3719/btf-middleware-install)
+- 安装node_modules分源下载，适用于私服包  [去看看怎么使用](https://github.com/liya3719/btf-middleware-install)
 ---
 #### 安装
 ```
