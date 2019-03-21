@@ -1,7 +1,7 @@
 {
   "name": "btf-cli",
   "version": "1.0.0",
-  "description": "一课前端拉取命令式发布gitlab，私服",
+  "description": "可根据业务场景选择工程模板和中间服务",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -25,5 +25,5 @@
     "shelljs": "^0.8.3"
   },
   "devDependencies": {},
-  "keywords": []
+  "keywords": ["脚手架", "vue+ts工程模板", "发布服务", "koa2+ts nodejs工程模板", "基于koa2前后端分离工程模板", "webpack4构建服务", "上传服务", "BOS", "页面搭建服务"]
 }
