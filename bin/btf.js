@@ -6,38 +6,37 @@ const shell = require('shelljs');
 const inquirer = require('inquirer');
 const commander = require('commander');
 const Template = require('../common/init');
-const registies = require('../common/registries');
 const version = require('../package.json').version;
-const promptList = [{
-    type: 'input',
-    name: 'author',
-    message: ' Author: '
-  },
-  {
-    type: 'input',
-    name: 'description',
-    message: ' description: '
-  },
-]
-const downloading = ora(`downloading component template`);
-commander.version(version)
-  .option('-n, --name', 'component name');
-commander.usage(`<init、publish> [project-name]`);
-commander.command('init <component-name>')
-  .description('the project template initialize command')
-  .action(async (cmd) => {
-    var template = new Template(cmd);
-    template.generateTpl();
-    inquirer.prompt(promptList).then((answer) => {
-      answer.name = cmd;
-      answer.author = `${answer.author} ${answer.author}@zuoyebang.com`
-      downloading.start();
-      setTimeout(() => {
-        downloading.succeed();
-      }, 1500);
-      template.renameComponent(answer);
-    });
-  })
+const promptList = require('../config/init.config.js');
+const registies = require('../config/registries.config.js');
+const downloading = ora(`downloading project template`);
+commander.version(version);
+commander.option('-n, --name', 'project name');
+commander.usage(`<init、dev、publish、upload、install> [project-name]`);
+commander.command('init')
+         .description('the project template initialize command')
+         .action(async (cmd) => {
+           console.log(cmd);
+         })
+commander.command('login')
+         .description('sign your gilab account')
+         .action((cmd) => {
+           console.log(cmd);
+         })
+commander.command('dev')
+         .description('run local project')
+commander.command('mock')
+         .description('run local mock')
+commander.command('build')
+         .description('run prod build')
+commander.command('install')
+         .description('diff download node modules')
+commander.command('publish')
+         .description('async project to gitlab')
+commander.command('upload')
+         .description('upload static resource')
+commander.command('monitor')
+         .description('monitor your project')
 commander.parse(process.argv);
 if (!commander.args.length) {
   console.log();
