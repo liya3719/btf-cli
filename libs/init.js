@@ -1,10 +1,10 @@
 /*
- * @description: 脚手架初始化服务
+ * @description: 脚手架初始化/下载工程模板/安装依赖
  * @version: 1.0.0
  * @Author: liya
  * @Date: 2019-03-19 11:13:59
  * @LastEditors: liya
- * @LastEditTime: 2020-08-25 18:00:26
+ * @LastEditTime: 2020-08-25 19:56:06
  */
 "use strict";
 const fs = require('fs');
@@ -75,10 +75,10 @@ class Template {
       // 更新模板信息
       fs.writeFileSync(fileName, packageResult);
       fs.writeFileSync(readme, readmeResult);
+      this.install();
     } catch (error) { 
-      throw Error(`renameProject method error ______________ ${JSON.stringify(error)}`);
+      console.log(symbols.error, chalk.red(`renameProject method error ______________ ${JSON.stringify(error)}`));
     } 
-
   }
   /**
    * 安装项目依赖
@@ -86,8 +86,9 @@ class Template {
   install() {
     let npm = INSTALL.checkNpm();
     shell.cd(`${baseDir}/${this.projectName}`);
+    console.log(symbols.info, chalk.black.bgGreen(`                     installing ...                          `));
     INSTALL.execCmd(which.sync(npm), ['install'], () => {
-      console.log(chalk.blue(`npm installed end`));
+      console.log(chalk.black.bgGreen(`                           npm installed end                              `));
     })
   }
 }

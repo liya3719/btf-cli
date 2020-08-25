@@ -2,29 +2,31 @@
 "use strict";
 const ora = require('ora');
 const figlet = require('figlet');
-const shell = require('shelljs');
 const inquirer = require('inquirer');
 const commander = require('commander');
 const init = require('../libs/init');
 const version = require('../package.json').version;
-const promptList = require('../config/init.config.js');
+const promptList = require('../config/init.config');
+const gitlabList = require('../config/gitlab.config');
+const serviceList = require('../config/service.config');
 const downloading = ora(`downloading project template`);
 commander.version(version);
-commander.option('-n, --name', 'project name');
-commander.usage(`<init、login、dev、publish、upload、install> [project-name]`);
+commander.usage(`<init、login、add、dev、publish、upload、install> [project-name]`);
 commander.command('login')
          .description('sign your gilab account')
          .action((cmd) => {
-           console.log(`login cmd`, cmd);
+           inquirer.prompt(gitlabList).then((res) => {
+             console.log(`res ------`, res);
+           })
          })
 commander.command('init <app-name>')
          .description('the project template initialize command')
          .action(async (cmd) => {
-           console.log(`cmd ------------`, cmd);
            var tpl = new init(cmd);
            inquirer.prompt(promptList).then((res) => {
              downloading.start();
              try {
+              //  获取命令行cmd参数，组合到res对象，对工程模板编译
               res['name'] = cmd;
               tpl.generateTpl(res.template, res);
               downloading.succeed(`download project template success`);
@@ -38,8 +40,13 @@ commander.command('dev')
          .action((cmd) => {
            console.log(`dev`);
          })
-commander.command('mock')
-         .description('run local mock')
+commander.command('add')
+         .description('add support service')
+         .action((cmd) => {
+           inquirer.prompt(serviceList).then((res) => {
+             console.log(res)
+           })
+         });
 commander.command('build')
          .description('run prod build')
 commander.command('publish')

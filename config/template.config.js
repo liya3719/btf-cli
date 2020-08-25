@@ -1,10 +1,10 @@
 /*
- * @description: 模板列表
+ * @description: 模板远程地址列表
  * @version: 1.0.0
  * @Author: liya
  * @Date: 2019-03-25 16:06:12
  * @LastEditors: liya
- * @LastEditTime: 2020-08-25 17:45:54
+ * @LastEditTime: 2020-08-25 20:04:18
  */
 const templateList = {
     VueSSR: 'liya3719/vue-ssr-component-template',

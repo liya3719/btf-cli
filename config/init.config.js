@@ -4,7 +4,7 @@
  * @Author: liya
  * @Date: 2019-03-25 15:06:38
  * @LastEditors: liya
- * @LastEditTime: 2020-08-25 17:45:09
+ * @LastEditTime: 2020-08-25 19:27:28
  */
 const promptList = [
   {
@@ -36,6 +36,11 @@ const promptList = [
     type: 'input',
     name: 'author',
     message: 'Author: '
+  },
+  {
+    type: 'input',
+    name: 'version',
+    message: 'Version: '
   },
   {
     type: 'input',
