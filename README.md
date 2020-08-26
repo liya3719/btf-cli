@@ -4,7 +4,7 @@
  * @Author: liya
  * @Date: 2019-03-19 11:13:59
  * @LastEditors: liya
- * @LastEditTime: 2020-08-26 14:41:10
+ * @LastEditTime: 2020-08-26 14:42:55
 -->
 #### 名称
    **btf-cli**
@@ -15,11 +15,11 @@
 #### 模板&服务
 ---
 提供以下可选择的模板和服务
-- Vue SSR工程模板 [去看看怎么使用](https://github.com/liya3719/vue-ssr-component-template)
-- Vue Typescript工程模板  [去看看怎么使用](https://github.com/liya3719/vue-ts-template)
-- Vue Component组件工程模板  [去看看怎么使用](https://github.com/liya3719/vue-component-template)
-- Koa Typescript Node后端工程模板 [去看看怎么使用](https://github.com/liya3719/node-ts-service-template)
-- webpack4构建服务 [去看看怎么使用](https://github.com/liya3719/btf-middleware-webpack4)
+- Vue SSR工程模板 [去看看](https://github.com/liya3719/vue-ssr-component-template)
+- Vue Typescript工程模板  [去看看](https://github.com/liya3719/vue-ts-template)
+- Vue Component组件工程模板  [去看看](https://github.com/liya3719/vue-component-template)
+- Koa Typescript Node后端工程模板 [去看看](https://github.com/liya3719/node-ts-service-template)
+- webpack4构建服务 [如何使用](https://github.com/liya3719/btf-middleware-webpack4)
 ---
 #### 安装
 ```
