@@ -4,15 +4,15 @@
  * @Author: liya
  * @Date: 2019-04-12 11:45:04
  * @LastEditors: liya
- * @LastEditTime: 2020-08-25 20:28:24
+ * @LastEditTime: 2020-08-26 14:23:14
  */
 
- class GitLabLogin {
+ class GitLabLoginService {
      constructor(options) {
          this.options = options;
      }
      login() {
-         
+
      }
  };
- module.exports = GitLabLogin;
+ module.exports = GitLabLoginService;

@@ -4,7 +4,7 @@
  * @Author: liya
  * @Date: 2020-08-25 17:11:12
  * @LastEditors: liya
- * @LastEditTime: 2020-08-25 17:45:34
+ * @LastEditTime: 2020-08-26 14:20:38
  */
 const ServicePromptList = [
   {
@@ -22,19 +22,7 @@ const ServicePromptList = [
   {
     type: 'list',
     name: 'publish',
-    message: '是否需要安装一键发布服务?',
-    choices: [
-      '是',
-      '否'
-    ],
-    filter: function(val) {
-      return val === '是' ? true : false;
-    }
-  },
-  {
-    type: 'list',
-    name: 'install',
-    message: '是否需要分源下载服务?',
+    message: '是否需要代码同步服务?',
     choices: [
       '是',
       '否'
@@ -58,7 +46,7 @@ const ServicePromptList = [
   {
     type: 'list',
     name: 'upload',
-    message: '是否需要上传服务?',
+    message: '是否需要资源上传服务?',
     choices: [
       '是',
       '否'
